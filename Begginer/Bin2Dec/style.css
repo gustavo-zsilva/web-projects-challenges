@@ -1,0 +1,127 @@
+:root {
+    --bg-color: rgb(32, 32, 32);
+    --text-color: #ffa600;
+    --darker-text-color: #db9004;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: var(--bg-color);
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    
+}
+
+.container header {
+    display: flex;
+    margin: 2rem auto;
+    flex-direction: column;
+    text-align: center;
+
+    color: var(--text-color);
+}
+
+.container header h1 {
+    font-size: 4rem;
+    font-family: Archivo, sans-serif;
+    animation: load .8s backwards;
+}
+
+.container header h3 {
+    font-weight: 500;
+    font-family: Archivo, sans-serif;
+    color: var(--darker-text-color);
+    animation: load .8s backwards;
+    animation-delay: .2s;
+}
+
+.container main {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+    animation: load .8s backwards;
+    animation-delay: .4s;
+}
+
+.container main label {
+    margin-top: 3rem;
+    color: var(--text-color);
+}
+
+.container main input {
+    padding: .8rem 1rem;
+    margin-top: 1rem;
+    background-color: rgba(0, 0, 0, 0.164);
+    border: 0;
+    border-bottom: 1px solid var(--darker-text-color);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.096);
+    color: white;
+    outline: none;
+
+    transition: .2s;
+}
+
+.container main input:focus {
+    border-bottom: 1px solid var(--text-color);
+}
+
+.container main output {
+    margin-top: 2rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.container main output span {
+    font-size: 3rem;
+    color: white;
+}
+
+.container main .error-log {
+    display: none;
+
+    margin-top: 2rem;
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.63);
+    padding: .8rem 0;
+    border-radius: .2rem;
+    color: white;
+
+    animation: pop .2s backwards;
+}
+
+@keyframes load {
+    from {
+        transform: translateX(-35%);
+        opacity: 0;
+    } to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
