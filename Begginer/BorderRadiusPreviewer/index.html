@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;1,100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Border Radius Previewer</title>
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <h1>
+                Border Radius Previewer
+            </h1>
+            <h3>
+                <!-- The name's pretty descriptive. -->
+            </h3>
+        </header>
+
+        <main>
+            <fieldset class="control-panel">
+                <legend>
+                    Control Panel
+                </legend>
+
+                <input type="number" id="top-left">
+
+                <input type="number" id="top-right">
+
+                <input type="number" id="bottom-left">
+
+                <input type="number" id="bottom-right">
+
+            </fieldset>
+            <div class="main-square"></div>
+            <fieldset class="output">
+                <legend>
+                    Output CSS Code
+                </legend>
+                <div class="output-code-lines"></div>
+            </fieldset>
+            
+        </main>
+    </div>
+
+    <script src="./script.js" type="module"></script>
+</body>
+</html>
