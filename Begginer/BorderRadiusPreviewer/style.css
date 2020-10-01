@@ -2,6 +2,7 @@
     --bg-color: #FFCFC7;
     --text-color: #ff7171;
     --darker-text-color: #ff6060;
+    --placeholder-color: #ff917d;
 }
 
 * {
@@ -101,6 +102,7 @@ body {
     margin-top: 2rem;
     border: 1px solid black;
 
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.082);
 }
 
 .container main .output {
@@ -125,6 +127,41 @@ body {
     font-family: Inconsolata, sans-serif;
 }
 
+.container main .output .copy-button {
+    background-color: var(--bg-color);
+    border: 1px solid var(--text-color);
+    padding: .5rem;
+    margin: 0;
+    display: none;
+    
+    cursor: pointer;
+    
+    justify-content: end;
+    margin-top: .8rem;
+}
+
+.container main .output .null-input {
+    border: 0;
+    background-color: #e6e6e6;
+    color: black;
+}
+
+.container main .warning {
+    display: none;
+    background-color: #00d1008f;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: .2rem;
+    border: 1px solid green;
+
+    animation: pop .8s backwards;
+}
+
+.container main fieldset input::placeholder {
+    color: var(--placeholder-color);
+}
+
 @media (min-width: 650px) {
     .container main {
         width: 650px;
@@ -138,5 +175,17 @@ body {
     } to {
         opacity: 1;
         transform: translateY(0vh);
+    }
+}
+
+@keyframes pop{
+    from {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+    to {
+        transform: scale(1);
     }
 }

@@ -1,0 +1,201 @@
+html {
+    --purple-color: #570057;
+    --bg-color: #f5f0ff;
+
+    --text-color: #242424;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--bg-color);
+    
+    transition: .1s;
+}
+
+.hide {
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    animation: load .8s backwards;
+}
+
+.container header {
+    margin: auto;
+    margin: 2rem 1rem;
+    align-items: center;
+    font-size: 1.5rem;
+    align-self: center;
+
+    color: var(--text-color);
+}
+
+.container header img {
+    width: 60px;
+
+    vertical-align: text-bottom;
+}
+
+.container header .dark-mode-toggle {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    padding: .8rem;
+    border: 0;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    cursor: pointer;
+}
+
+.container main .search {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 2rem;
+}
+
+.container main .search button,
+.container main .search input {
+    padding: .8rem;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.062);
+
+}
+
+.container main .search input {
+    width: 30rem;
+    border-radius: .2rem 0 0 .2rem;
+    border: 1px solid var(--text-color);
+    outline: none;
+    transition: .2s;
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.container main .search button {
+    background-color: #00ee38;
+    border-radius: 0 .2rem .2rem 0;
+    border: 1px solid #22863a;
+    color: var(--purple-color);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.container main .search button:hover {
+    padding: .8rem 1.5rem;
+    box-shadow: 3px 3px 3px #fcd70550;
+} 
+
+.container main .search input::placeholder {
+    color: var(--text-color);
+}
+
+.container main .search input:focus {
+    width: 32rem;
+    box-shadow: 3px 3px 3px #fcd70550;
+}
+
+.container main .output {
+    border: 1px solid var(--text-color);
+    margin: 2rem auto;
+    border-radius: .2rem;
+    padding: 2rem;
+    max-width: 40rem;
+    color: var(--text-color);
+}
+
+.container main .output .repos-info,
+.container main .output .main-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid var(--text-color);
+}
+
+.container main .output .main-info img {
+    border-radius: 50%;
+    width: 100px;
+    margin: auto;
+}
+
+.container main .output .main-info .name {
+    text-align: center;
+    margin: 2rem 0 1rem;
+    font-size: 1.5rem;
+}
+
+.container main .output .side-info {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.container main .output .side-info p {
+    margin-bottom: .8rem;
+}
+
+.container main .output .main-info .username {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.container main .output .repos-info p.repos {
+    text-align: center;
+}
+
+.container main .output .repos-info p {
+    margin-bottom: .6rem;
+}
+
+.container main .output .repos-info p:last-child {
+    margin-bottom: 2rem;
+}
+
+.container main .warning {
+    background-color: #ff00008a;
+    max-width: 30rem;
+    margin: auto;
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid red;
+    border-radius: .2rem;
+    color: var(--bg-color);
+
+    animation: pop .6s backwards;
+}
+
+@keyframes load {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    } to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pop {
+    from {
+        opacity: 0.8;
+        transform: scale(0.6);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

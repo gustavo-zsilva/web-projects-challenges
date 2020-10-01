@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>GitHub User Searcher</title>
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <h1>
+                <img
+                    src="https://www.flaticon.com/svg/static/icons/svg/733/733553.svg"
+                    alt="Github Icon"
+                    class="github-icon"
+                >
+                User Searcher
+            </h1>
+
+            <button class="dark-mode-toggle"></button>
+        </header>
+
+        <main>
+            <div class="search">
+                <input type="text" placeholder="Github username...">
+                <button class="search-button">Search!</button>
+            </div>
+
+            <div class="output hide">
+                <div class="main-info">
+                </div>
+                <div class="side-info">
+                </div>
+                <div class="repos-info">
+                </div>
+            </div>
+
+            <div class="warning hide">
+                <p></p>
+            </div>
+        </main>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
