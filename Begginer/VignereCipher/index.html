@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Trispace:wght@200;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Vigenere Cipher</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Vigenere Cipher</h1>
+            <h3>The Vigenere Cipher is a method of encrypting alphabetic text by using a series of interwoven Caesar ciphers, based on the letters of a keyword.</h3>
+        </header>
+
+        <main>
+            <div class="input-area">
+                <div class="vigenere-inputs">
+                    <input type="text" placeholder="Criptography Key">
+                    <textarea id="encryptor-textarea" cols="30" rows="3"></textarea>
+                </div>
+                
+                <button type="button" id="encrypt">Encrypt</button>
+                <button type="button" id="decrypt">Decrypt</button>
+            </div>
+            <fieldset class="output">
+                <legend>Output</legend>
+                <div class="output-text"></div>
+            </fieldset>
+        </main>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

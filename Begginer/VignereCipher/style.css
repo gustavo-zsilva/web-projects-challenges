@@ -1,0 +1,112 @@
+:root {
+    --main-color: #00c500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Trispace', sans-serif;
+}
+
+body {
+    height: 95vh;
+
+    background-color: #0e0e0e;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 80rem;
+    margin: 3rem auto;
+}
+
+.container header {
+    text-align: center;
+
+    color: var(--main-color);
+}
+
+.container header h1 {
+    margin-bottom: 1.5rem;
+}
+
+.container header h3 {
+    margin: auto;
+    width: 60%;
+    font-weight: 300;
+}
+
+.container main .vigenere-inputs {
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 3rem;
+}
+
+.container main .vigenere-inputs input {
+    margin-bottom: 1rem;
+    padding: .2rem;
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    color: white;
+}
+
+.container main .input-area {
+    display: flex;
+
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.container main .input-area .vigenere-inputs textarea {
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+
+    max-block-size: 15rem;
+    max-width: 30rem;
+    padding: .5rem;
+
+    color: white;
+}
+
+.container main .input-area button {
+    padding: 0 3rem;
+
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+}
+
+.container main .input-area button#decrypt {
+    margin-left: 2rem;
+}
+
+.container main fieldset.output {
+    display: flex;
+    flex-direction: column;
+
+    margin: 5rem auto;
+    padding: 1rem;
+
+    width: 60%;
+
+    border: 1px solid var(--main-color);
+    overflow: auto;
+}
+
+.container main fieldset.output legend {
+    text-align: center;
+    color: var(--main-color);
+}
+
+.container main fieldset.output .output-text {
+    color: white;
+    line-height: 1.5rem;
+    word-wrap: break-word;
+    width: 750px;
+}
