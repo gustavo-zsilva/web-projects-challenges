@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Metrophobic&display=swap');
+
+body {
+    background: rgb(24,9,121);
+    background: radial-gradient(circle, rgba(24,9,121,1) 9%, rgba(16,60,165,1) 46%, rgba(0,164,255,1) 87%);
+}
+
+.container {
+    display: flex;
+
+    font-family: 'Metrophobic', sans-serif;
+}
+
+.container h1 {
+    display: flex;
+    margin: 10rem auto;
+    
+    font-size: 8rem;
+
+    color: #f1f1f1;
+    text-decoration: underline;
+}
